@@ -1,0 +1,17 @@
+{
+  "env": {
+    "node": true,
+    "commonjs": true,
+    "es2021": true
+  },
+  "extends": ["standard"],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 12
+  },
+  "plugins": ["@typescript-eslint"],
+  "ignorePatterns": ["**/*.test.ts"],
+  "rules": {
+    "space-before-function-paren": "off"
+  }
+}
