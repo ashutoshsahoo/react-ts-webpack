@@ -12,6 +12,15 @@
   "plugins": ["@typescript-eslint"],
   "ignorePatterns": ["**/*.test.ts"],
   "rules": {
-    "space-before-function-paren": "off"
+    "space-before-function-paren": "off",
+    "semi": [1, "always"],
+    "quotes": [
+      "error",
+      "double",
+      {
+        "avoidEscape": true,
+        "allowTemplateLiterals": true
+      }
+    ]
   }
 }

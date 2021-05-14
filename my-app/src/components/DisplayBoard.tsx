@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 
 interface IDisplayBoardProps {
   numberOfUsers: number
@@ -20,5 +20,5 @@ export const DisplayBoard = (props: IDisplayBoardProps) => {
         </button>
       </div>
     </div>
-  )
-}
+  );
+};

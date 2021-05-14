@@ -1,26 +1,26 @@
-import React from 'react'
-import { User } from '../services/UserService'
+import React from "react";
+import { User } from "../services/UserService";
 
 interface IUsersProps {
   users: User[]
 }
 
 export const Users = ({ users }: IUsersProps) => {
-  console.log('users length:::', users.length)
-  if (users.length === 0) return null
+  console.log("users length:::", users.length);
+  if (users.length === 0) return null;
 
   const UserRow = (user: User, index: number) => {
     return (
-      <tr key={index} className={index % 2 === 0 ? 'odd' : 'even'}>
+      <tr key={index} className={index % 2 === 0 ? "odd" : "even"}>
         <td>{index + 1}</td>
         <td>{user.firstName}</td>
         <td>{user.lastName}</td>
         <td>{user.email}</td>
       </tr>
-    )
-  }
+    );
+  };
 
-  const userTable = users.map((user, index) => UserRow(user, index))
+  const userTable = users.map((user, index) => UserRow(user, index));
 
   return (
     <div>
@@ -39,5 +39,5 @@ export const Users = ({ users }: IUsersProps) => {
         </table>
       </div>
     </div>
-  )
-}
+  );
+};

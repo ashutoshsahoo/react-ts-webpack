@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 
 interface ICreateUserProps {
   onChangeForm: Function
@@ -60,7 +60,7 @@ const CreateUser = (props: ICreateUserProps) => {
           </form>
         </div>
       </div>
-  )
-}
+  );
+};
 
-export default CreateUser
+export default CreateUser;

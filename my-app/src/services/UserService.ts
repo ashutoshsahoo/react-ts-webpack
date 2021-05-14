@@ -5,15 +5,15 @@ export interface User {
 }
 
 export async function fetchAllUsers () {
-  const response = await fetch('/api/users')
-  return await response.json()
+  const response = await fetch("/api/users");
+  return await response.json();
 }
 
 export async function createUserApi (data: User) {
-  const response = await fetch('/api/user', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
+  const response = await fetch("/api/user", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ user: data })
-  })
-  return await response.json()
+  });
+  return await response.json();
 }
