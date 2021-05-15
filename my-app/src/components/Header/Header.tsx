@@ -5,7 +5,7 @@ import { Navbar, Nav, NavDropdown } from "react-bootstrap";
 
 import "./Header.scss";
 
-export default function Header() {
+export const Header = () => {
   return (
     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
       <Navbar.Brand href="/dashboard">React-Bootstrap</Navbar.Brand>
@@ -30,4 +30,4 @@ export default function Header() {
       </Navbar.Collapse>
     </Navbar>
   );
-}
+};

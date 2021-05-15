@@ -1,5 +1,5 @@
 import React from "react";
-import Footer from "../Footer/Footer";
+import { Footer } from "../Footer/Footer";
 
 export const Password = () => {
   return (
@@ -33,9 +33,7 @@ export const Password = () => {
                     </div>
                 </main>
             </div>
-            <div id="layoutAuthentication_footer">
-                <Footer />
-            </div>
+            <Footer />
         </div>
   );
 };

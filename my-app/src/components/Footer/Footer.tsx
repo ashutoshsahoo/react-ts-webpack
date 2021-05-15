@@ -1,18 +1,20 @@
 import React from "react";
 
-export default function Footer() {
+export const Footer = () => {
   return (
-        <footer className="py-4 bg-light mt-auto">
+    <div id="layoutAuthentication_footer">
+      <footer className="py-4 bg-light mt-auto">
         <div className="container-fluid">
-            <div className="d-flex align-items-center justify-content-between small">
-                <div className="text-muted">Copyright &copy; Your Website 2021</div>
-                <div>
-                    <a href="#">Privacy Policy</a>
-                    &middot;
-                    <a href="#">Terms &amp; Conditions</a>
-                </div>
+          <div className="d-flex align-items-center justify-content-between small">
+            <div className="text-muted">Copyright &copy; Your Website 2021</div>
+            <div>
+              <a href="#">Privacy Policy</a>
+              &middot;
+              <a href="#">Terms &amp; Conditions</a>
             </div>
+          </div>
         </div>
-    </footer>
+      </footer>
+    </div>
   );
-}
+};

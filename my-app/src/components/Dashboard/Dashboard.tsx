@@ -1,8 +1,8 @@
 import { faAngleRight, faChartArea, faChartBar } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
-import Footer from "../Footer/Footer";
-import Header from "../Header/Header";
+import { Footer } from "../Footer/Footer";
+import { Header } from "../Header/Header";
 import { AreaChart } from "./AreaChart";
 import { BarChart } from "./BarChart";
 

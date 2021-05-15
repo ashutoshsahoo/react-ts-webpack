@@ -1,13 +1,15 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import App from "./App";
-import reportWebVitals from "./reportWebVitals";
-
-import "./index.scss";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import App from "./App";
+import Dashboard from "./components/Dashboard/Dashboard";
+import { Error401 } from "./components/Error/Error401";
+import { Error404 } from "./components/Error/Error404";
+import { Error500 } from "./components/Error/Error500";
 import Login from "./components/Login/Login";
 import { Password } from "./components/Password/Password";
-import Dashboard from "./components/Dashboard/Dashboard";
+import "./index.scss";
+import reportWebVitals from "./reportWebVitals";
 
 ReactDOM.render(
   <React.StrictMode>
@@ -19,6 +21,9 @@ ReactDOM.render(
         <Route path="/dashboard" component={Dashboard} />
         <Route path="/register" component={Login} />
         <Route path="/password" component={Password} />
+        <Route path="/error401" component={Error401} />
+        <Route path="/error404" component={Error404} />
+        <Route path="/error500" component={Error500} />
         <Route path="/login" component={Login} />
       </Switch>
     </Router>

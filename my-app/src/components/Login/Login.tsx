@@ -1,5 +1,5 @@
 import React from "react";
-import Footer from "../Footer/Footer";
+import { Footer } from "../Footer/Footer";
 
 export default function Login() {
   return (
@@ -42,9 +42,7 @@ export default function Login() {
             </div>
         </main>
     </div>
-    <div id="layoutAuthentication_footer">
-      <Footer />
-    </div>
+    <Footer />
 </div>
   );
 }
