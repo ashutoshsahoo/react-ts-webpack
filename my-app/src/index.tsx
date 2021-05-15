@@ -6,7 +6,7 @@ import Dashboard from "./components/Dashboard/Dashboard";
 import { Error401 } from "./components/Error/Error401";
 import { Error404 } from "./components/Error/Error404";
 import { Error500 } from "./components/Error/Error500";
-import Login from "./components/Login/Login";
+import { Login } from "./components/Login/Login";
 import { Password } from "./components/Password/Password";
 import "./index.scss";
 import reportWebVitals from "./reportWebVitals";

@@ -4,8 +4,16 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Navbar, Nav, NavDropdown } from "react-bootstrap";
 
 import "./Header.scss";
+import { useHistory } from "react-router";
 
 export const Header = () => {
+  const history = useHistory();
+  const handleLogout = (e: any) => {
+    e.preventDefault();
+    sessionStorage.removeItem("token");
+    history.push("/");
+    window.location.reload();
+  };
   return (
     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
       <Navbar.Brand href="/dashboard">React-Bootstrap</Navbar.Brand>
@@ -24,7 +32,7 @@ export const Header = () => {
             <NavDropdown.Item href="#action/3.1">Settings</NavDropdown.Item>
             <NavDropdown.Item href="#action/3.2">Activity Log</NavDropdown.Item>
             <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-            <NavDropdown.Item href="#action/3.4">Logout</NavDropdown.Item>
+            <NavDropdown.Item onClick={handleLogout}>Logout</NavDropdown.Item>
           </NavDropdown>
         </Nav>
       </Navbar.Collapse>

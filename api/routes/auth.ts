@@ -1,14 +1,9 @@
 import * as express from "express";
 import { Logger } from "../logger/logger";
-import User, { IUser } from "./user";
-import Auth from "./auth";
 
-class Routes {
+class Auth {
   public express: express.Application;
   public logger: Logger;
-
-  // array to hold users
-  public users: IUser[];
 
   constructor() {
     this.express = express();
@@ -24,11 +19,11 @@ class Routes {
   }
 
   private routes(): void {
-    // user route
-    this.express.use("/users", User);
-    // auth route
-    this.express.use("/auth", Auth);
+    this.express.post("/login", (req, res, next) => {
+      this.logger.info("url:::::::" + req.url);
+      res.json({ token: "test123" });
+    });
   }
 }
 
-export default new Routes().express;
+export default new Auth().express;

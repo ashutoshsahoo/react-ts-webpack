@@ -10,7 +10,7 @@ export async function fetchAllUsers () {
 }
 
 export async function createUserApi (data: User) {
-  const response = await fetch("/api/user", {
+  const response = await fetch("/api/users", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ user: data })

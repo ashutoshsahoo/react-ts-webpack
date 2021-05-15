@@ -1,7 +1,28 @@
-import React from "react";
+import React, { useState } from "react";
+import { loginUser } from "../../services/AuthService";
 import { Footer } from "../Footer/Footer";
 
-export default function Login() {
+interface ILogin {
+    setToken: (token: string) => void;
+}
+
+export const Login = (props: ILogin) => {
+  const [email, setEmail] = useState<string>();
+  const [password, setPassword] = useState<string>();
+
+  const handleSubmit = async (e:any) => {
+    e.preventDefault();
+    if (email != null && password != null) {
+      const token = await loginUser({
+        email,
+        password
+      });
+      props.setToken(token);
+    } else {
+      console.log("Username and Password is null!");
+    }
+  };
+
   return (
     <div id="layoutAuthentication">
     <div id="layoutAuthentication_content">
@@ -15,11 +36,11 @@ export default function Login() {
                                 <form>
                                     <div className="form-group">
                                         <label className="small mb-1" htmlFor="inputEmailAddress">Email</label>
-                                        <input className="form-control py-4" id="inputEmailAddress" type="email" placeholder="Enter email address" />
+                                        <input className="form-control py-4" id="inputEmailAddress" type="email" placeholder="Enter email address" onChange={e => setEmail(e.target.value)}/>
                                     </div>
                                     <div className="form-group">
                                         <label className="small mb-1" htmlFor="inputPassword">Password</label>
-                                        <input className="form-control py-4" id="inputPassword" type="password" placeholder="Enter password" />
+                                        <input className="form-control py-4" id="inputPassword" type="password" placeholder="Enter password" onChange={e => setPassword(e.target.value)}/>
                                     </div>
                                     <div className="form-group">
                                         <div className="custom-control custom-checkbox">
@@ -29,7 +50,7 @@ export default function Login() {
                                     </div>
                                     <div className="form-group d-flex align-items-center justify-content-between mt-4 mb-0">
                                         <a className="small" href="/password">Forgot Password?</a>
-                                        <a className="btn btn-primary" href="/dashboard">Login</a>
+                                        <a className="btn btn-primary" onClick={handleSubmit}>Login</a>
                                     </div>
                                 </form>
                             </div>
@@ -45,4 +66,4 @@ export default function Login() {
     <Footer />
 </div>
   );
-}
+};

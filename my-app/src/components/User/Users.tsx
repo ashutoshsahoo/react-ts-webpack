@@ -1,5 +1,5 @@
 import React from "react";
-import { User } from "../services/UserService";
+import { User } from "../../services/UserService";
 
 interface IUsersProps {
   users: User[]
