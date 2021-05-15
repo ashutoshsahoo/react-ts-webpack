@@ -8,6 +8,8 @@ import { Error404 } from "./components/Error/Error404";
 import { Error500 } from "./components/Error/Error500";
 import { Login } from "./components/Login/Login";
 import { Password } from "./components/Password/Password";
+import { Settings } from "./components/Settings/Settings";
+import { Test } from "./components/Test";
 import "./index.scss";
 import reportWebVitals from "./reportWebVitals";
 
@@ -19,11 +21,13 @@ ReactDOM.render(
         {/* <Route path="/service" component={Service} />
         <Route path="/about" component={About} /> */}
         <Route path="/dashboard" component={Dashboard} />
+        <Route path="/settings" component={Settings} />
         <Route path="/register" component={Login} />
         <Route path="/password" component={Password} />
         <Route path="/error401" component={Error401} />
         <Route path="/error404" component={Error404} />
         <Route path="/error500" component={Error500} />
+        <Route path="/test" component={Test} />
         <Route path="/login" component={Login} />
       </Switch>
     </Router>

@@ -30,7 +30,7 @@
     "react-hooks/exhaustive-deps": "warn", // Checks effect dependencies
     "semi": [1, "always"],
     "quotes": [
-      "error",
+      "warn",
       "double",
       {
         "avoidEscape": true,

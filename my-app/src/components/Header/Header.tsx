@@ -29,7 +29,7 @@ export const Header = () => {
             id="collasible-nav-dropdown"
             alignRight={true}
           >
-            <NavDropdown.Item href="#action/3.1">Settings</NavDropdown.Item>
+            <NavDropdown.Item href="/settings">Settings</NavDropdown.Item>
             <NavDropdown.Item href="#action/3.2">Activity Log</NavDropdown.Item>
             <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
             <NavDropdown.Item onClick={handleLogout}>Logout</NavDropdown.Item>
